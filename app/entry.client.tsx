@@ -35,13 +35,14 @@ await pgInstance.exec(`
   );
 `);
 
-/*await pgInstance.electric.syncShapeToTable({
+// Not working
+await pgInstance.electric.syncShapeToTable({
   shape: {
     url: `http://localhost:3000/v1/shape?table=batch`,
   },
   table: "batch",
   primaryKey: ["id"],
-});*/
+});
 
 startTransition(() => {
   hydrateRoot(
